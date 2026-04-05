@@ -38,6 +38,26 @@
 
     </div>
   </section>
+  
+<script>
+  // Create map centered on world
+  const map = L.map('map').setView([20, 0], 2);
 
+  // Add map tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+  }).addTo(map);
+
+  // Add locations
+  L.marker([-2.333, 34.833]).addTo(map)
+    .bindPopup("Serengeti - Lions, Elephants");
+
+  L.marker([78.223, 15.646]).addTo(map)
+    .bindPopup("Svalbard - Polar Bears");
+
+  L.marker([-3.465, -62.215]).addTo(map)
+    .bindPopup("Amazon - Jungle Wildlife");
+
+</script>
 </body>
 </html>
