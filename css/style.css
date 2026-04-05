@@ -41,6 +41,27 @@ body {
   object-fit: cover;
 }
 
+.leaflet-popup-content {
+  width: 220px;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-card {
+  text-align: center;
+}
+
+.popup-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 section {
   padding: 40px;
   text-align: center;
