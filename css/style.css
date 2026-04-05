@@ -20,6 +20,26 @@ body {
   margin: 20px auto;
   border-radius: 10px;
 }
+#animals {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.animal-card {
+  background: white;
+  padding: 15px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.animal-card img {
+  width: 100%;
+  border-radius: 10px;
+}
 
 section {
   padding: 40px;
