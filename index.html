@@ -72,6 +72,25 @@
     }
   ]
 };
+
+function getPopupContent(location) {
+  if (!wildlifeData[location]) return "<p>No animals found</p>";
+
+  let html = `<div class="popup-container">`;
+
+  wildlifeData[location].forEach(animal => {
+    html += `
+      <div class="popup-card">
+        <img src="${animal.image}" alt="${animal.name}">
+        <p>${animal.name}</p>
+      </div>
+    `;
+  });
+
+  html += `</div>`;
+  return html;
+}
+  
   function showAnimals(location) {
   const container = document.getElementById("animals");
   container.innerHTML = "";
@@ -98,16 +117,13 @@
 
   // Add locations
 L.marker([-2.333, 34.833]).addTo(map)
-  .bindPopup("Serengeti")
-  .on("click", () => showAnimals("serengeti"));
+  .bindPopup(getPopupContent("serengeti"));
 
 L.marker([78.223, 15.646]).addTo(map)
-  .bindPopup("Svalbard")
-  .on("click", () => showAnimals("svalbard"));
+  .bindPopup(getPopupContent("svalbard"));
 
 L.marker([-3.465, -62.215]).addTo(map)
-  .bindPopup("Amazon")
-  .on("click", () => showAnimals("amazon"));
+  .bindPopup(getPopupContent("amazon"));
 
 </script>
 </body>
