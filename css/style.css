@@ -14,6 +14,13 @@ body {
 }
 
 /* Section */
+#map {
+  height: 500px;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
 section {
   padding: 40px;
   text-align: center;
